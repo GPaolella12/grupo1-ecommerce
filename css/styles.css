@@ -3,7 +3,6 @@
 .container-fluid{
 
 }
-
 body{
   font-family: 'Lato', sans-serif;
   background: white;
@@ -12,26 +11,17 @@ body#login, body#register{
   background-color: #f50;
 }
 
+article#product{
+  margin-bottom: 10px;
+}
+
 a, a:hover{
   color:white;
   text-decoration: none;
 }
 
-/* img{
-  display: block;
-  margin: 0 auto;
-} */
-
 p.card-text{
   color: #f50;
   font-size: 1.5em;
   font-weight: bold;
-}
-
-article.card{
-  border: none;
-}
-
-article.card:last-of-type{
-  
 }
