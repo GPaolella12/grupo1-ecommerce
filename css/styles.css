@@ -21,6 +21,16 @@ a, a:hover{
   margin: 0 auto;
 } */
 
-article.product p{
-  text-align: center;
+p.card-text{
+  color: #f50;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+article.card{
+  border: none;
+}
+
+article.card:last-of-type{
+  
 }
