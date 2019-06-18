@@ -1,0 +1,20 @@
+*{box-sizing: border-box;}
+
+.container-fluid{
+
+}
+body{
+  background: white;
+}
+body#login, body#register{
+  background-color: #f50;
+}
+
+a, a:hover{
+  color:white;
+  text-decoration: none;
+}
+
+article.product p{
+  text-align: center;
+}
