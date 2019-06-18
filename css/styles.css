@@ -4,6 +4,7 @@
 
 }
 body{
+  font-family: 'Lato', sans-serif;
   background: white;
 }
 body#login, body#register{
@@ -14,6 +15,11 @@ a, a:hover{
   color:white;
   text-decoration: none;
 }
+
+/* img{
+  display: block;
+  margin: 0 auto;
+} */
 
 article.product p{
   text-align: center;
