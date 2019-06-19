@@ -83,17 +83,17 @@
             <ul>
               <li><a href="#">Cómo comprar</a>
                 <ul>
-                  <li><a href="#">¿Cómo encuentro un producto?</a></li>
-                  <li><a href="#">Comprar en PhoneHouse es muy fácil</a></li>
-                  <li><a href="#">Productos relacionados</a></li>
+                  <li><a href="#" class="btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">¿Cómo encuentro un producto?</a></li>
+                  <li><a href="#" class="btn" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">Comprar en PhoneHouse es muy fácil</a></li>
+                  <li><a href="#" class="btn" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">Productos relacionados</a></li>
                 </ul>
               </li>
             </ul>
             <ul>
               <li><a href="#">Estado de mi pedido</a>
                 <ul>
-                  <li><a href="#">¿Cuál es el estado de mi pedido?</a></li>
-                  <li><a href="#">Tengo un problema con mi pedido</a></li>
+                  <li><a href="#" class="btn" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">¿Cuál es el estado de mi compra?</a></li>
+                  <li><a href="#" class="btn" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">Tengo un problema con mi compra</a></li>
                 </ul>
               </li>
             </ul>
@@ -101,32 +101,87 @@
           <main class="col-12 col-md-8 content">
             <section>
               <h3>Cómo comprar</h3>
-              <article>
-                <h4>¿Cómo encuentro un producto?</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro reiciendis natus, sint soluta dignissimos minus, aspernatur sit. Labore similique delectus, unde, molestiae dolore sed officiis cumque nam, nostrum culpa non.</p>
-              </article>
-              <article>
-                <h4>Comprar en PhoneHouse es muy fácil</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt nihil a quaerat cupiditate expedita dignissimos id, optio, ipsum eos ducimus, quas numquam nesciunt consequatur praesentium commodi facilis quo eligendi dolore.</p>
+              <div class="accordion" id="accordionExample">
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                      <button class="btn" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        ¿Cómo encuentro mi producto?
+                      </button>
+                    </h2>
+                  </div>
 
-              </article>
-              <article>
-                <h4>Productos relacionados</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis tempora vitae, excepturi ipsam, veniam consectetur alias libero cupiditate voluptates optio nesciunt praesentium sint! Excepturi vitae libero, numquam accusamus id fugit?</p>
-              </article>
+                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque sequi reiciendis sit doloremque vitae cupiditate, laboriosam recusandae, commodi eos illum unde, distinctio, consectetur eveniet excepturi! Alias sint quis, nam quibusdam!
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                      <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Comprar en PhoneHouse es muy facil
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus impedit molestiae, quisquam alias non repellat quia, modi voluptatibus qui reprehenderit et recusandae, quos, quidem cum. Quis modi in esse similique.
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingThree">
+                    <h2 class="mb-0">
+                      <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Productos relacionados
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, odio cupiditate nam et soluta enim sunt quidem illum quaerat quibusdam laboriosam eaque, reiciendis. Est maxime eveniet, labore maiores excepturi voluptatum.
+                    </div>
+                  </div>
+                </div>
+              </div>
             </section>
-
             <section>
               <h3>Estado de mi pedido</h3>
-              <article>
-                <h4>¿Cuál es el estado de mi pedido?</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro reiciendis natus, sint soluta dignissimos minus, aspernatur sit. Labore similique delectus, unde, molestiae dolore sed officiis cumque nam, nostrum culpa non.</p>
-              </article>
-              <article>
-                <h4>Tengo un problema con mi pedido</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt nihil a quaerat cupiditate expedita dignissimos id, optio, ipsum eos ducimus, quas numquam nesciunt consequatur praesentium commodi facilis quo eligendi dolore.</p>
-              </article>
+              <div class="accordion" id="accordionExample">
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                      <button class="btn" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                        ¿Cuál es el estado de mi compra?
+                      </button>
+                    </h2>
+                  </div>
+
+                  <div id="collapseFour" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque sequi reiciendis sit doloremque vitae cupiditate, laboriosam recusandae, commodi eos illum unde, distinctio, consectetur eveniet excepturi! Alias sint quis, nam quibusdam!
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                      <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Tengo un problema con mi compra
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="collapseFive" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus impedit molestiae, quisquam alias non repellat quia, modi voluptatibus qui reprehenderit et recusandae, quos, quidem cum. Quis modi in esse similique.
+                    </div>
+                  </div>
+                </div>
+              </div>
             </section>
+
           </main>
         </div>
       </div>

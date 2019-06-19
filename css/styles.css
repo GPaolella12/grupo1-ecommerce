@@ -34,6 +34,14 @@ article.card:last-of-type{
 
 }
 
+div.accordion button{
+  color: grey;
+}
+
+.btn:focus{
+  outline: 0;
+  box-shadow: none;
+}
 #brands { margin-top: 2rem; }
 #brands article { text-align: center}
 #brands article .icon {
