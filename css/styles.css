@@ -1,8 +1,5 @@
 *{box-sizing: border-box;}
 
-.container-fluid{
-
-}
 body{
   font-family: 'Lato', sans-serif;
   background: white;
@@ -18,6 +15,10 @@ article#product{
 a, a:hover{
   color:white;
   text-decoration: none;
+}
+
+h2{
+  color: #f50;
 }
 
 p.card-text{
@@ -69,4 +70,54 @@ div.accordion button{
   text-transform: uppercase;
   color: #f50;
   font-weight: bold;
+}
+
+/* CART CSS */
+.container-fluid{
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.row{
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.cart-item-section{
+  background-color: #EEEEEE;
+}
+
+
+.title-section{
+  color: #f50;
+  font-size: 16px;
+  margin-top: 20px;
+  padding-bottom: 16px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.cart-item{
+  padding: 24px 8px 20px;
+  background-color: white;
+  margin: 0 0 8px;
+  width: 100%;
+  display: table;
+}
+
+.cart-item .img-container{
+  text-align: center;
+  display: table-cell;
+  float: none;
+  vertical-align: top;
+}
+
+.cart-item .img-container img{
+  width: 40px;
+  height: 40px;
+}
+
+.cart-item .item-title{
+  padding-left: 4px;
+  margin-bottom: 20px;
 }
