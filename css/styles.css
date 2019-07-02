@@ -17,6 +17,11 @@ a, a:hover{
   text-decoration: none;
 }
 
+li{
+  text-decoration: none;
+  list-style-type: none;
+}
+
 h4{
   font-size: 16px;
 }
@@ -259,6 +264,7 @@ div.accordion button{
   margin-left: 0;
   padding-top: 1rem;
   padding-bottom: .8rem;
+  font-size: 13px;
 }
 
 .summary-form{
@@ -284,7 +290,13 @@ div.accordion button{
   padding: .5rem 8px;
 }
 
-.summary li a:active, .summary a:hover{
+.summary li a{
+  text-decoration: underline;
+  font-size: 13px;
+  color: #666;
+}
+
+.summary li a:active, .summary li a:hover{
   color: #f50;
 }
 
@@ -387,7 +399,27 @@ li.summary-pay{
   margin-left: 10px;
 }
 
-@media (min-width: 768px){
+.nav-icons{
+  display: flex;
+  align-items: center;
+}
+
+.nav-icons li{
+  margin-bottom: 5px;
+  margin-top: 10px;  
+  line-height: 30px;
+  font-size: 30px;
+}
+
+@media (min-width: 1025px){
+
+  .main-nav{
+    border-left: 1px solid white;
+    padding-bottom: 2px;
+    padding-left: 20px;
+    position: absolute;
+    left: 210px;
+  }
 
   .summary-section{
     padding-left: 28px;
