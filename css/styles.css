@@ -400,15 +400,23 @@ li.summary-pay{
 }
 
 .nav-icons{
+  margin-right: 15px;
+  position: relative;
+  bottom: 5px;
   display: flex;
   align-items: center;
 }
 
-.nav-icons li{
-  margin-bottom: 5px;
-  margin-top: 10px;  
+.nav-icons a{ 
   line-height: 30px;
   font-size: 30px;
+}
+
+
+@media (min-width: 469px){
+  .nav-icons{
+    top: 1px;
+  }
 }
 
 @media (min-width: 1025px){
