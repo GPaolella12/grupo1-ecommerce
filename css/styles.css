@@ -400,6 +400,8 @@ li.summary-pay{
 }
 
 .nav-icons{
+  margin-top: 10px;
+  float: right;
   margin-right: 15px;
   position: relative;
   bottom: 5px;
@@ -412,15 +414,98 @@ li.summary-pay{
   font-size: 30px;
 }
 
+.contact-container{
+  margin: 50px 20px;
+  padding: 10px 10px;
+  background-color: #eeeeee;
+}
+
+.contact-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.contact-text h4{
+  margin-top: 20px;
+  text-align: center;
+  color: #f50;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.contact-options{
+  padding: 15px 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact-options li{
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.contact-options li:nth-child(even){
+  margin-right: 0;
+}
+
+.contact-options a{
+  font-size: 15px;
+  color: #333;
+}
+
+.contact-form{
+ border-top: 1px solid #666;
+ margin-top: 10px;
+}
+
+li.p-m{
+  margin-right: 0;
+}
+
 
 @media (min-width: 469px){
   .nav-icons{
+    margin-top: 0;
     top: 1px;
+  }
+
+  .contact-form h4{
+    font-size: 25px;
+  }
+
+  .contact-options li, .contact-options a{
+    font-size: 20px;
+  }
+
+  .p-m li span{
+    font-size: 14px;
+  }
+
+  .contact-options li:nth-child(even){
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+
+  .contact-options i{
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 768px){
+  .contact-form{
+    border-top: 0;
   }
 }
 
 @media (min-width: 1025px){
-
+  
   .main-nav{
     border-left: 1px solid white;
     padding-bottom: 2px;
@@ -479,4 +564,17 @@ li.summary-pay{
   .summary-pay a, .summary-pay a:hover{
     vertical-align: middle;
   }
+
+  .contact-text h4{
+    font-size: 40px;
+    margin-bottom: 60px;
+  }
+
+}
+
+@media (min-width: 1400px){
+  .contact-options li:last-of-type{
+    margin-right: 0;
+  }
+  
 }
