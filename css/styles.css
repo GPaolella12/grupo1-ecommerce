@@ -12,8 +12,8 @@ article#product{
   margin-bottom: 10px;
 }
 
-a, a:hover{
-  color:white;
+.navbar-brand a, .navbar-brand a:hover, .nav-icons a, .nav-icons a:hover{
+  color: white;
   text-decoration: none;
 }
 
@@ -52,13 +52,13 @@ div.accordion button{
   padding-top: 1.5em;
   padding-bottom: 1em;
 }
-#brands { margin-top: 2rem; }
-#brands article {
+.brands { margin-top: 2rem; }
+.brands article {
   text-align: center;
   margin-bottom: 25px;
 }
 
-#brands article .icon {
+.brands article .icon {
   width: 72px;
   height: 72px;
   margin: 0 auto;
@@ -68,10 +68,10 @@ div.accordion button{
   border-radius: 50%;
   margin-bottom: .5rem;
 }
-#brands article p {
+.brands article p {
   font-weight: bold;
 }
-#brands article a {
+.brands article a {
   text-transform: uppercase;
   color: #f50;
   font-weight: bold;
@@ -238,6 +238,7 @@ div.accordion button{
 }
 
 .summary-container{
+  margin-bottom: 10px;
   padding: 0 15px;
   margin-top: 10px;
   background-color: white;
@@ -469,6 +470,29 @@ li.p-m{
   margin-right: 0;
 }
 
+.sidebar h3, .sidebar h4 { color: #f50; }
+  .faq { margin-top: 2rem; }
+  .faq a {color: #212529;}
+  .faq .sidebar {}
+  .faq .sidebar ul li ul {
+    padding-left: 1rem;
+  }
+
+  .faq .content {
+    padding-left: 2rem;
+    border-left: 1px solid darkgray;
+  }
+
+  .faq .content section {
+    margin-bottom: 2rem;
+  }
+  
+  .faq .content section h3 {
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid darkgray;
+  }
+
 
 @media (min-width: 469px){
   .nav-icons{
@@ -496,6 +520,35 @@ li.p-m{
   .contact-options i{
     font-size: 25px;
   }
+
+  .faq-container ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .sidebar h3, .sidebar h4 { color: #f50; }
+  .faq { margin-top: 2rem; }
+  .faq a {color: #212529;}
+  .faq .sidebar {}
+  .faq .sidebar ul li ul {
+    padding-left: 1rem;
+  }
+
+  .faq .content {
+    padding-left: 2rem;
+    border-left: 1px solid darkgray;
+  }
+
+  .faq .content section {
+    margin-bottom: 2rem;
+  }
+  
+  .faq .content section h3 {
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid darkgray;
+  }
+
 }
 
 @media (min-width: 768px){
