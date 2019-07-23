@@ -483,7 +483,6 @@ li.p-m{
 .sidebar h3, .sidebar h4 { color: #f50; }
   .faq { margin-top: 2rem; }
   .faq a {color: #212529;}
-  .faq .sidebar {}
   .faq .sidebar ul li ul {
     padding-left: 1rem;
   }
