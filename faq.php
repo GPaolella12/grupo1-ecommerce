@@ -1,65 +1,11 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <!-- Meta Tags <-->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link rel="icon" href="images/phonehouse-ico.png" type="image/x-icon">
-
-    <!-- Bootstrap-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:300&display=swap" rel="stylesheet">
-
-    <!-- My CSS-->
-    <link rel="stylesheet" href="css/styles.css">
-
-    <title>Preguntas Frecuentes | PhoneHouse</title>
-
-  </head>
+<?php 
+  require_once('partials/head.php');
+?>
   <body class="bg-light px-2">
-    <header class="container-fluid bg-dark">
-      <nav id="nav" class="container p-2 navbar">
-        <div class="navbar-brand text-white">
-          <img class="header-logo" src="images/phonehouse-logo-sm.png" alt="PhoneHouse Logo" width="32">
-          <a href="index.html">
-            PHONE HOUSE
-          </a>
-        </div>
-        <div class="main-nav">
-          <ul class="d-inline-flex align-center nav">
-            <li class="mr-3">
-              <a class="text-white" href="faq.html">FAQ</a>
-            </li>
-            <li class="mr-3 text-white">
-              |
-            </li>
-            <li class="mr-3">
-              <a class="text-white" href="contact.html">Contacto</a>
-            </li>
-            <li class="mr-3 text-white">
-              |
-            </li>
-            <li class="mr-3">
-              <a class="text-white" href="login.html">Login</a>
-            </li>
-            <li class="mr-3 text-white">
-              |
-            </li>
-            <li>
-              <a class="text-white" href="register.html">Register</a>
-            </li>
-          </ul>
-        </div>
-        <div class="nav-icons">
-          <a href="cart.html">
-            <i class="fas fa-shopping-cart"></i>
-          </a>
-        </div>
-      </nav>
-    </header>
+      <?php 
+        require_once('partials/header.php');
+      ?>
+
       <div class="container faq p-2 d-flex flex-wrap">
         <div class="row">
           <div class="col-12 col-md-4 sidebar">

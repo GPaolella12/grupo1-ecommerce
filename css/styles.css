@@ -17,6 +17,11 @@ article#product{
   text-decoration: none;
 }
 
+.main-nav a:active, .nav-icons a:visited{
+  padding-bottom: 5px;
+  border-bottom: 2px solid white;
+}
+
 li{
   text-decoration: none;
   list-style-type: none;
@@ -318,6 +323,11 @@ div.accordion button{
   font-size: 1rem;
 }
 
+.form-group p{
+  margin-top: 10px;
+  color: red;
+}
+
 .summary li div{
   margin-top: 5px;
 }
@@ -491,6 +501,12 @@ li.p-m{
     padding-bottom: 1rem;
     margin-bottom: 2rem;
     border-bottom: 1px solid darkgray;
+  }
+
+  .login-image{
+    background-image: url('../assets/images/login-background.jpg');
+    background-size: cover;
+    background-position: center;
   }
 
 

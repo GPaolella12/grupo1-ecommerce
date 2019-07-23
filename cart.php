@@ -1,60 +1,10 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link rel="icon" href="images/phonehouse-ico.png" type="image/x-icon">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <!-- My CSS -->
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Carrito de Compras</title>
-  </head>
+<?php 
+  require_once('partials/head.php');
+?>
   <body>
-    <header class="container-fluid bg-dark">
-      <nav id="nav" class="container p-2 navbar">
-        <div class="navbar-brand">
-          <img class="header-logo" src="images/phonehouse-logo-sm.png" alt="PhoneHouse Logo" width="32">
-          <a href="index.html">
-            PHONE HOUSE
-          </a>
-        </div>
-        <div class="main-nav">
-          <ul class="align-center nav">
-            <li class="mr-3">
-              <a class="text-white" href="faq.html">FAQ</a>
-            </li>
-            <li class="mr-3 text-white">
-              |
-            </li>
-            <li class="mr-3">
-                <a class="text-white" href="contact.html">Contacto</a>
-            </li>
-            <li class="mr-3 text-white">
-              |
-            </li>
-            <li class="mr-3">
-              <a class="text-white" href="login.html">Login</a>
-            </li>
-            <li class="mr-3 text-white">
-              |
-            </li>
-            <li>
-              <a class="text-white" href="register.html">Register</a>
-            </li>
-          </ul>
-        </div>
-        <div class="nav-icons">
-          <a href="cart.html">
-            <i class="fas fa-shopping-cart"></i>
-          </a>
-        </div>
-      </nav>
-    </header>
+    <?php 
+        require_once('partials/header.php');
+    ?>
 
     <main class="container-fluid">
       <div class="row">
@@ -115,6 +65,7 @@
                   <p class="text-center">Enviado y vendido por Phone House</p>
                 </div>
               </div>
+
             </div>
           </div>
           <div class="summary-section col-xs-12 col-lg-3">
