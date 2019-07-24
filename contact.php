@@ -50,9 +50,9 @@
             </ul>
           </div>
         </div>
-        <div class="contact-form col-12 col-md-6">
+        <div class="contact-form col-12 col-md-6 bg-white rounded">
           <h4 class="text-center my-4">Hacenos tu consulta para que nos pongamos en contacto.</h6>
-          <form class="bg-white border mx-auto my-auto p-3 p-md-4 rounded" style="margin-top: 10px">
+          <form class="mx-auto my-auto p-3 p-md-4 rounded" style="margin-top: 10px">
             <div class="form-group">
               <label for="exampleInputEmail1">Nombre</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa tu nombre...">
