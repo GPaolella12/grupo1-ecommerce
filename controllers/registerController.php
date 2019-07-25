@@ -99,14 +99,14 @@
         if (!$terms){
             $errors['terms'] = 'Tenes que aceptar los terminos y condiciones';
         }
+        if (!$errors) {
+            $pass = password_hash($pass, PASSWORD_DEFAULT);
+            $addUser = $db -> prepare("INSERT INTO users VALUES (NULL, '$name', '$lastName', '$dni', '$phone', '$email', '$pass', '$news' )");
+    
+            $addUser -> execute();
+        }
     }
 
-    if (!$errors) {
-        $pass = password_hash($pass, PASSWORD_DEFAULT);
-        $addUser = $db -> prepare("INSERT INTO users VALUES (NULL, '$name', '$lastName', '$dni', '$phone', '$email', '$pass', '$news' )");
-
-        $addUser -> execute();
-    }
 
 
 ?>

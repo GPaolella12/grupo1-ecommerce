@@ -9,7 +9,7 @@
     <main class="container-fluid">
       <div class="row">
         <div class="full-container row">
-          <div class="cart-item-section col-xs-12 col-lg-9">
+          <div class="cart-item-section col-xs-12 col-lg-8">
             <h4 class="title-section" style="color: #f50; ">
               Carrito de Compras
             </h4>
@@ -29,7 +29,7 @@
                 <!-- <div class="delete-section col-xs-1">
                   <i class="fas fa-minus-circle"></i>
                 </div> -->
-                <div class="col-xs-8 col-lg-3 d-flex justify-content-center">
+                <div class="col-xs-8 col-lg-5 d-flex justify-content-center">
                   <div class="price-section">
                     <div class="discount-container">
                       <span class="original-price">$28.766,00</span>
@@ -54,7 +54,7 @@
                     </select>
                   </div>
                 </div>
-                <div class="delivery-section col-xs-12 col-lg-5 float-left">
+                <div class="delivery-section col-xs-12 col-lg-5 float-left ml-3">
                   <div class="badge-international-shipping mx-auto">
                     <i class="fas fa-plane pr-2"></i>
                     Envío Internacional
@@ -68,7 +68,7 @@
 
             </div>
           </div>
-          <div class="summary-section col-xs-12 col-lg-3">
+          <div class="summary-section col-xs-12 col-lg-4">
             <div class="summary-container">
               <h4 class="title-summary">resumen de tu pedido</h4>
               <ul class="summary">
@@ -145,12 +145,7 @@
         </div>
       </div>
     </main>
-    <!-- Optional JavaScript -->
-    <!-- Fontawesome -->
-    <script src="https://kit.fontawesome.com/b7a3dbb7f0.js"></script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
-</html>
+    
+    <?php
+      require_once('partials/footer.php');
+    ?>

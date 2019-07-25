@@ -1,4 +1,9 @@
 <?php 
+  require_once('controllers/loginController.php');
+
+?>
+
+<?php 
   require_once('partials/head.php');
 ?>
   <body id="login">
@@ -11,11 +16,17 @@
       <form class="bg-white border col-10 col-lg-4 p-4 p-3-sm" action="" method="POST">
         <div class="form-group">
           <label for="exampleInputEmail1">Email</label>
-          <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa tu email...">
+          <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa tu email..." value="<?= isset($userLogin['email']) ? $userLogin['email'] : ''?>">
+          <?php if (isset($errors['email'])) : ?>
+          <p><?= $errors['email'];?></p>
+          <?php endif ?>
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Contraseña</label>
           <input type="password" name="pass" class="form-control" id="exampleInputPassword1" placeholder="Ingresa tu contraseña...">
+          <?php if (isset($errors['pass'])) : ?>
+          <p><?= $errors['pass'];?></p>
+          <?php endif ?>
         </div>
         <div class="form-group form-check">
           <input type="checkbox" name="save" class="form-check-input" id="exampleCheck1">
