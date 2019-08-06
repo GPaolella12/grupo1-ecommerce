@@ -101,7 +101,7 @@
         }
         if (!$errors) {
             $pass = password_hash($pass, PASSWORD_DEFAULT);
-            $addUser = $db -> prepare("INSERT INTO users VALUES (NULL, '$name', '$lastName', '$dni', '$phone', '$email', '$pass', '$news' )");
+            $addUser = $db -> prepare("INSERT INTO usuarios VALUES (NULL, '$name', '$lastName', '$dni', '$email', '$phone', '$pass', '$news' )");
     
             $addUser -> execute();
         }

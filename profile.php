@@ -1,5 +1,6 @@
-<?php 
+<?php
   require_once('partials/head.php');
+  require_once('functions.php');
 ?>
   <body>
     <?php 
@@ -14,7 +15,7 @@
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">Inicio</a></li>
                 <li class="breadcrumb-item"><a href="#">Mi Cuenta</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Mis Datos Personales</li>
+                <li class="breadcrumb-item active" aria-current="page">Mis Datos</li>
               </ol>
             </nav>
         </div>
@@ -25,114 +26,78 @@
             <li class="item-submenu">
               <a class="item-link" href="">
               <span class="icon"></span>
+              <span>Mis datos</span>
+              </a>
+            </li>
+            <li class="item-submenu">
+              <a class="item-link" href="">
+              <span class="icon"></span>
               <span>Mis pedidos</span>
               </a>
             </li>
             <li class="item-submenu">
-            <a class="item-link" href="">
-              <span class="icon"></span>
-              <span>Mis Resenias</span>
-                </a>
-              </li>
-            <li class="item-submenu">
               <a class="item-link" href="">
               <span class="icon"></span>
-              <span>Mis cupones</span>
-              </a>
-            </li>
-            <li class="item-submenu">
-              <a class="item-link" href="">
-              <span class="icon"></span>
-              <span>mis datos personales</span>
-              </a>
-              </li>
-            <li class="item-submenu">
-              <a class="item-link" href="">
-              <span class="icon"></span>
-              <span>mis direcciones</span>
+              <span>Pagos y direcciones</span>
               </a>
               </li>
               <li class="item-submenu">
-                <a class="item-link" href="">
+                <a class="item-link" href="login.php">
                 <span class="icon"></span>
-                <span>cerrar cesion</span>
+                <span>Cerrar sesion</span>
                 </a>
-                </li>
+              </li>
           </ul>
         </div>
       </div>
 
-      <div class="title-section col-md-9 col-xs-12 " "column">
+      <div class="title-section col-md-9 col-xs-12">
             <h4 class="section-title">MIS DATOS PERSONALES</h4>
             <br>
             <br>
 
 
           <div class="profile-data row">
-            <form class="row col-md-12 col-xs-12">
+            <form class="row col-md-12 col-xs-12 d-flex ">
               <div class="form-row col-md-12 col-xs-12">
-                <div class="col-md-6 col-xs-12">
-                  <input type="text" class="form-control" placeholder="First name">
+                <div class="col-md-6 col-xs-12 pb-4 pr-4">
+                  <label class="form-label">NOMBRE</label>
+                  <input type="text" class="form-control mt-2">
                 </div>
-                <div class="col-md-6 col-xs-12">
-                  <input type="text" class="form-control" placeholder="Last name">
+                <div class="col-md-6 col-xs-12 pb-4 pr-4">
+                  <label class="form-label">APELLIDO</label>
+                  <input type="text" class="form-control mt-2">
+                </div>
+                <div class="col-md-6 col-xs-12 pb-4 pr-4">
+                  <label class="form-label">EMAIL</label>
+                  <input type="text" class="form-control mt-2">
+                </div>
+                <div class="col-md-6 col-xs-12 pb-4 pr-4">
+                  <label class="form-label">TELEFONO</label>
+                  <input type="text" class="form-control mt-2">
+                </div>
+                <div class="col-md-6 col-xs-12 pb-4 pr-4">
+                  <label class="form-label">SEXO</label>
+                  <select name="sexo" class="form-control mt-2">
+                    <option>Hombre</option>
+                    <option>Mujer</option>
+                    <option>Prefiero no decirlo</option>
+                  </select>
+                </div>
+                <div class="col-md-6 col-xs-12 pb-4 pr-4">
+                  <label class="form-label">FECHA DE NACIMIENTO</label>
+                  <input type="date" class="form-control mt-2">
+                </div>
+                <div class="col-md-6 col-xs-12 pb-4 pr-4">
+                  <label class="form-label">DNI</label>
+                  <input type="text" class="form-control mt-2">
+                </div>
+                <div class="col-md-6 col-xs-12 pt-2">
+                  <label for=""> </label>
+                  <button class="form-control btn-primary">GUARDAR CAMBIOS</button>
+                </div>
               </div>
-              </div>
-            </div>
-    </form>
-              <br>
-              <form class="row col-md-12 col-xs-12">
-              <div class="form col-md-6 col-xs-12">
-              <label class="form-label form-row col-md-12 col-xs-12">Sexo</label>
-
-              </div>
-              <div class="form-row col-md-6 col-xs-12">
-                <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-                    <label class="custom-control-label" for="customRadioInline1">Femenino</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-                  <label class="custom-control-label" for="customRadioInline2">Masculino</label>
-                </div>
-
-                </div>
-
-
-
-
-              <!-- ver el action del formulario !-->
-                  <div class="row col-md-12 col-xs-12">
-                  <div class="form col-md-6 col-xs-12">
-                <label class="form-label  form-row col-md-9 col-xs-12">Fecha Nacimiento</label>
-                  </div>
-                  <input class="row col-xs-12 col-md-6" type="date" name="dia" min="2000-01-01" max="2014-12-31">
-                    </div>
-
-
-              <div class="row col-md-4 col-xs-12">
-                <input type="text" class="form-control" placeholder="Telefono">
-              </div>
-
-
-                <div class="row col-xs-12 col-md-12">
-                  <div class="row col-xs-12 col-md-6">
-                    <label class="form-label Required" for="porfile_update_email">Email</label>
-                      <input type="email" id=profile_update_email  name="profile_update[email]" required=required class="form-control form-control-sm" autocomplete="email" value="">
-                  </div>
-                    <div class="col-xs-12 col-md-6">
-                        <a href=""   class ="btn btn-sn btn-default-online btn-inside-form">Cambar email </a>
-
-                    </div>
-                </div>
-                  <br>
-                  <div class="row col-md-4 col-xs-12">
-                  <div class="col-xs-12 col-md-12">
-                    <button type="submit" class="btn btn-primary btn-sm col-xs-12" name="button">Guardar Cambios</button>
-                    </div>
-
-                </div>
-
+              
             </form>
 
         </div>
