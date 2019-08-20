@@ -104,6 +104,8 @@
             $addUser = $db -> prepare("INSERT INTO usuarios VALUES (NULL, '$name', '$lastName', '$dni', '$email', '$phone', '$pass', '$news' )");
     
             $addUser -> execute();
+
+            header('Location: login.php');
         }
     }
 

@@ -10,31 +10,32 @@
       require_once('partials/header.php');
     ?>
     <form class="bg-white border row mx-md-5 mx-3 my-5 p-5-md p-3 py-4 rounded" action="" method="POST">
+      <h1 style="margin: 0 auto; margin-bottom: 30px;">Ingresa tus datos para completar el registro</h1>
       <div class="col-12 col-md-6">
         <div class="form-group">
           <label for="exampleInputEmail1">Nombre</label>
-          <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa tu email..." value="<?= isset($name) ? $name : ''?>">
+          <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa tu nombre" value="<?= isset($name) ? $name : ''?>">
           <?php if (isset($errors['name'])) : ?>
           <p><?= $errors['name'];?></p>
           <?php endif ?>
         </div>
         <div class="form-group">
           <label for="exampleInputEmail1">Apellido</label>
-          <input type="text" name="lastName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa tu email..." value="<?= isset($lastName) ? $lastName : ''?>">
+          <input type="text" name="lastName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa tu apellido" value="<?= isset($lastName) ? $lastName : ''?>">
           <?php if (isset($errors['lastName'])) : ?>
           <p><?= $errors['lastName'];?></p>
           <?php endif ?>
         </div>
         <div class="form-group">
           <label for="exampleInputEmail1">DNI</label>
-          <input type="text" name="dni" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa tu DNI..." value="<?= isset($dni) ? $dni : ''?>">
+          <input type="text" name="dni" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa tu DNI" value="<?= isset($dni) ? $dni : ''?>">
           <?php if (isset($errors['dni'])) : ?>
           <p><?= $errors['dni'];?></p>
           <?php endif ?>
         </div>
         <div class="form-group">
           <label for="exampleInputEmail1">Email</label>
-          <input type="text" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa tu email..." value="<?= isset($email) ? $email : ''?>">
+          <input type="text" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa tu email" value="<?= isset($email) ? $email : ''?>">
           <?php if (isset($errors['email'])) : ?>
           <p><?= $errors['email'];?></p>
           <?php endif ?>
@@ -43,21 +44,21 @@
       <div class="col-12 col-md-6">
         <div class="form-group">
           <label for="exampleInputPassword1">Telefono</label>
-          <input type="text" name="phone" class="form-control" id="exampleInputPassword1" placeholder="Ingresa tu numero de telefono..." value="<?= isset($phone) ? $phone : ''?>">
+          <input type="text" name="phone" class="form-control" id="exampleInputPassword1" placeholder="Ingresa tu numero de telefono" value="<?= isset($phone) ? $phone : ''?>">
           <?php if (isset($errors['phone'])) : ?>
           <p><?= $errors['phone'];?></p>
           <?php endif ?>
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Contraseña</label>
-          <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Ingresa tu contraseña..." value="<?= isset($name) ? '' : ''?>">
+          <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Ingresa tu contraseña" value="<?= isset($name) ? '' : ''?>">
           <?php if (isset($errors['password'])) : ?>
           <p><?= $errors['password'];?></p>
           <?php endif ?>
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Confirmar Contraseña</label>
-          <input type="password" name="passwordConfirm" class="form-control" id="exampleInputPassword1" placeholder="Ingresa tu contraseña nuevamente...">
+          <input type="password" name="passwordConfirm" class="form-control" id="exampleInputPassword1" placeholder="Ingresa tu contraseña nuevamente">
           <?php if (isset($errors['passwordConfirm'])) : ?>
           <p><?= $errors['passwordConfirm'];?></p>
           <?php endif ?>
