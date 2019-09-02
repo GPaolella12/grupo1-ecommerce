@@ -1,8 +1,7 @@
 <?php
 
     require_once('functions.php');
-
-    $db = conectarDb($dns, $db_user, $db_pass, $opt);
+    require_once('models/pdo.php');
 
     $userLogin['email'] = isset($_POST['email']) ? $_POST['email'] : '';
     $userLogin['password'] = isset($_POST['pass']) ? $_POST['pass'] : ''; 

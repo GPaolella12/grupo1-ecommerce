@@ -1,6 +1,7 @@
 <?php
 
     require_once('functions.php');
+    require_once('models/pdo.php');
 
     $name = isset($_POST['name']) ? $_POST['name'] : '';
     $lastName = isset($_POST['lastName']) ? $_POST['lastName'] : '';
@@ -11,9 +12,6 @@
     $passConfirm = isset($_POST['passwordConfirm']) ? $_POST['passwordConfirm'] : '';
     $news = isset($_POST['news']) ? $_POST['news'] : '';
     $terms = isset($_POST['terms']) ? $_POST['terms'] : '';
-
-    
-    $db = conectarDb($dns,$db_user,$db_pass,$opt);
 
     //Si hay POST validamos
     $errors=[];

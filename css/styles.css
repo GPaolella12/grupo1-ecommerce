@@ -497,6 +497,7 @@ li.p-m{
   }
   
   .faq .content section h3 {
+    color: #f50;
     padding-bottom: 1rem;
     margin-bottom: 2rem;
     border-bottom: 1px solid darkgray;
