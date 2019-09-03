@@ -41,10 +41,6 @@ article.card{
   border: none;
 }
 
-article.card:last-of-type{
-
-}
-
 div.accordion button{
   color: grey;
 }
@@ -213,7 +209,7 @@ div.accordion button{
   margin-top: 20px;
   padding-right: 8px;
   padding-left: 8px;
-}
+} 
 
 .delivery-section::before{
   border-top: 1px solid #ccc;
