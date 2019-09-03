@@ -31,6 +31,18 @@
             </li>
           </ul>
         </div>
+        <div class="dropdown show">
+          <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-user"></i>
+          </a>
+
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="profile.php">Perfil</a>
+            <a class="dropdown-item" href="#">Compras</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Cerrar Sesión</a>
+          </div>
+        </div>
         <div class="nav-icons">
           <a href="cart.php">
             <i class="fas fa-shopping-cart"></i>

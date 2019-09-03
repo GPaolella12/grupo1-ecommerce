@@ -410,6 +410,15 @@ li.summary-pay{
   margin-left: 10px;
 }
 
+a.dropdown-toggle , a.dropdown-toggle:focus, a.dropdown-toggle:hover{
+  color: white;
+  float: right;
+}
+
+.dropdown-menu a, .dropdown-menu a:hover{
+  font-size: 16px;
+}
+
 .nav-icons{
   margin-top: 10px;
   float: right;
@@ -422,7 +431,7 @@ li.summary-pay{
 
 .nav-icons a{ 
   line-height: 30px;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .contact-container{
@@ -507,7 +516,26 @@ li.p-m{
     background-image: url('../assets/images/login-background.jpg');
     background-size: cover;
     background-position: center;
+    display: none;
   }
+
+  .fb-login{
+    background: #3C5A99;
+    color: white;
+  }
+
+  .fb-login , .google-login {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 8px;
+  }
+
+  .fb-login i .google-login i{
+    margin-right: 15px;
+    font-size: 20px;
+  }
+
 
 
 @media (min-width: 469px){

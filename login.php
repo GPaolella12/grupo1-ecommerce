@@ -33,17 +33,23 @@ require_once('controllers/loginController.php');
           <input type="checkbox" name="save" class="form-check-input" id="exampleCheck1">
           <label class="form-check-label" for="exampleCheck1">Recordame</label>
         </div>
-        <button style="width: 100%;" type="submit" class="btn btn-dark">Iniciar Sesion</button>
+        <button style="width: 100%;" type="submit" class="btn btn-dark">Iniciar Sesión</button>
         <br>
-        <div class="row" style="margin: 0;">
-          <div style="margin: 25px 0; width: 50%;" class="fb-login-button col-xs-12 col-md-6" data-width="" data-size="large" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false"></div>
-          <div style="margin: 25px 0;" class="btn col-xs-12 col-md-6 border">
-            <a style="color: black;" href="/users/google-oauth/" style="text-transform:none">
-            <div class="left">
-              <img width="20px" alt="Google &quot;G&quot; Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"/>
-            Continuar con Google
-            </div>
-            </a>
+        <div class="row">
+          <div class="fb-login col-12 rounded mt-3">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+              width="30" height="30"
+              viewBox="0 0 172 172"
+              style=" fill:#000000; margin-right: 10px;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M103.48974,10.75c-21.18825,0 -33.61474,11.19167 -33.61474,36.69067v22.43433h-26.875v26.875h26.875v64.5h26.875v-64.5h21.5l5.375,-26.875h-26.875v-17.88867c0,-9.60513 3.13237,-14.36133 12.14624,-14.36133h14.72876v-25.77271c-2.54775,-0.344 -9.97113,-1.10229 -20.13526,-1.10229z"></path></g></g></svg>
+              <span>Continuar con Facebook</span>
+            </span>
+          </div>
+          <div class="google-login col-12 rounded mt-3 rounded border">
+            <span>
+              <img style="width: 28px; margin-right: 15px;" src="https://img.icons8.com/color/48/000000/google-logo.png">
+              <span>Continuar con Google</span>
+            </span>
           </div>
         </div>
       </form>

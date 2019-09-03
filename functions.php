@@ -1,21 +1,5 @@
 <?php
 
-    $dns = 'mysql:host=localhost;dbname=phone_house;port=3306';
-    $db_user = 'root';
-    $db_pass = '';
-    $opt = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
-
-    function conectarDb($dns, $db_user, $db_pass, $opt){
-        try{
-            $db = new PDO($dns, $db_user, $db_pass, $opt);
-            return $db;
-        }
-        catch(PDOException $Exception){
-           $Exception -> getMessage();
-           return $Exception;
-        }
-    }
-
     function traerEmails($db){
         $query = $db -> prepare("SELECT email FROM usuarios");
         $query -> execute();
