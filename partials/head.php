@@ -19,3 +19,4 @@ session_start()
     
     <title>Carrito de Compras</title>
   </head>
+  <body>

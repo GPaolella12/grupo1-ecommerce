@@ -1,7 +1,7 @@
 <?php
 
     function traerEmails($db){
-        $query = $db -> prepare("SELECT email FROM usuarios");
+        $query = $db -> prepare("SELECT email FROM users");
         $query -> execute();
 
         $usersEmails = $query -> fetchAll(PDO::FETCH_ASSOC);
@@ -31,7 +31,7 @@
 
     function traerUsuarioConEmail($email, $db){
 
-        $query = $db -> prepare("SELECT * FROM usuarios WHERE(email = '$email')");
+        $query = $db -> prepare("SELECT * FROM users WHERE(email = '$email')");
         $query -> execute();
         $user = $query -> fetch(PDO::FETCH_ASSOC);
 

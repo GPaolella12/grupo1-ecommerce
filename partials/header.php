@@ -9,7 +9,7 @@
         <div class="main-nav">
           <ul class="d-inline-flex align-center nav">
             <li class="mr-3">
-              <a class="text-white" href="faq.php">FAQ</a>
+              <a class="text-white" href="faq.php">Faq</a>
             </li>
             <li class="mr-3 text-white">
               |
@@ -36,12 +36,19 @@
             <i class="fas fa-user"></i>
           </a>
 
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <div class="dropdown-menu user">
             <a class="dropdown-item" href="profile.php">Perfil</a>
             <a class="dropdown-item" href="#">Compras</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Cerrar Sesión</a>
           </div>
+
+          <!-- <div class="dropdown-menu admin" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="profile.php">Perfil</a>
+            <a class="dropdown-item" href="#">Mis Productos</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Cerrar Sesión</a>
+          </div> -->
         </div>
         <div class="nav-icons">
           <a href="cart.php">
