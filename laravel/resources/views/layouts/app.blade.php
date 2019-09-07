@@ -57,12 +57,17 @@
                                 </a>
     
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="profile">
+                                        Mi Perfil
+                                    </a>
+                                    <a class="dropdown-item" href="buys">
+                                        Mis Compras
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
@@ -75,7 +80,7 @@
         </nav>
 
         <main class="py-4 cointainer">
-            @yield('content')
+            @yield('main')
         </main>
     </div>
 </body>

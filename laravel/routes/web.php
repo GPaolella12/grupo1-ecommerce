@@ -19,11 +19,13 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('productAdd', function(){
-    return view('productAdd');
-});
+
+// Products routes
+Route::get('productAdd', function(){ return view('productAdd'); });
 Route::post('productAdd', 'productController@store');
-
 Route::get('products', 'productController@index');
+Route::get('product/{id}', 'productController@show');
 
-Route::get('product/{id}', 'productController@show'); 
+// Users routes
+Route::get('profile', function(){ return view('profile'); });
+Route::get('buys', function(){ return view('buys'); });

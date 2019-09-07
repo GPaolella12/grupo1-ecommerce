@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('content')
+@section('main')
     
     <article class="card col-12 col-sm-6 col-md-4 col-xl-3 p-3" style="width: 18rem;">
         <img class="card-img-top" src="https://i.linio.com/p/be2df0b65895b20885c41e0e0c13b7f7-catalog.webp" alt="">

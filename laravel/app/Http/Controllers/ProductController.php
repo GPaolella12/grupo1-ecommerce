@@ -22,7 +22,7 @@ class ProductController extends Controller
 
     protected function validator(Request $request){
         return Validator::make($request,[
-            'name' => ['Required', 'string', 'max:255'],
+            'title' => ['Required', 'string', 'max:255'],
             'description' => ['Required', 'string', 'max:500'],
             'price' => ['required', 'integer', 'size:10'],
             'discount' => ['integer', 'max:90'],
@@ -47,14 +47,9 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $product = new Product;
-        $product->title = $request['title'];
-        $product->description = $request['description'];
-        $product->price = $request['price'];
-        $product->discount = $request['discount'];
-        $product->img = $request['img']->null();
-
-        $product->save();
+        Product::create($request->all());
+        // $newProduct = new Product();
+        // $newProduct->save($request->all());
         return redirect('products');
     }
 
