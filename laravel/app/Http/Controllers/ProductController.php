@@ -14,7 +14,20 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        $products = Product::all();
+        $vac = compact("products");
+
+        return view('products', $vac);
+    }
+
+    protected function validator(Request $request){
+        return Validator::make($request,[
+            'name' => ['Required', 'string', 'max:255'],
+            'description' => ['Required', 'string', 'max:500'],
+            'price' => ['required', 'integer', 'size:10'],
+            'discount' => ['integer', 'max:90'],
+            'image' => ['string', 'max:255']
+        ]);
     }
 
     /**
@@ -22,9 +35,8 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
+    public function create(Request $request){
+
     }
 
     /**
@@ -35,7 +47,15 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $product = new Product;
+        $product->title = $request['title'];
+        $product->description = $request['description'];
+        $product->price = $request['price'];
+        $product->discount = $request['discount'];
+        $product->img = $request['img']->null();
+
+        $product->save();
+        return redirect('products');
     }
 
     /**
@@ -44,9 +64,13 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show($id)
     {
-        //
+        $product = Product::find($id);
+        $vac = compact("product");
+
+        return view("product", $vac);
+
     }
 
     /**
@@ -57,7 +81,7 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+        
     }
 
     /**

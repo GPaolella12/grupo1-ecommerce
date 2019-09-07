@@ -20,7 +20,7 @@
             </nav>
         </div>
 
-        <div class="mobile-menu account-menu col-md-3 col-xs-12" id="account-menu" "column">
+        <div class="mobile-menu account-menu col-md-3 col-xs-12" id="account-menu">
           <div class="item-section" >
           <ul class="icon-menu">
             <li class="item-submenu">

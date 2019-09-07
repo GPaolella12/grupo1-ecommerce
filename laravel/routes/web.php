@@ -12,9 +12,18 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts/app');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('productAdd', function(){
+    return view('productAdd');
+});
+Route::post('productAdd', 'productController@store');
+
+Route::get('products', 'productController@index');
+
+Route::get('product/{id}', 'productController@show'); 
