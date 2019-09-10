@@ -2,17 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Product;
 use App\Category;
-use Illuminate\Http\Request;
+use App\Brand;
 
-class ProductController extends Controller
+class ProductsController extends Controller
 {
     public function all()
     {
-        $products = Product::all();
+        $products = Product::paginate(20);
+        $categories = Category::all();
+        $brands = Brand::all();
 
-        return view('products', $vac);
+        return view('products', compact("products", "brands", "categories"));
     }
 
     public function add()
@@ -20,7 +23,7 @@ class ProductController extends Controller
         $brands = Brand::all();
         $categories = Category::all();
 
-        return view('/products/add', compact("brands", "categories"));
+        return view('addProduct', compact("brands", "categories"));
     }
 
     public function search(Request $request)
@@ -34,7 +37,7 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $validation = [
-            "name" => "required|string|min:8|max:255",
+            "name" => "required|string|min:3|max:255",
             "price" => "required|numeric|min:0|max:100000",
             "brand" => "required|exists:brands,id",
             "category" => "required|exists:categories,id",
@@ -47,17 +50,19 @@ class ProductController extends Controller
         $product->name = $request->name;
         $product->brand_id = $request->brand;
         $product->category_id = $request->category;
+        $product->price = $request->price;
+        $product->discount = $request->discount;
         $product->stock = $request->stock;
 
         $product->save();
-        return view('/products', compact("product"));
+        return redirect("/productos");
     }
 
     public function detail($id)
     {
-        $vac = compact("product");
+        $product = Product::find($id);
 
-        return view("product", $vac);
+        return view("product", compact("product"));
     }
 
     public function delete(Request $request)
@@ -66,6 +71,6 @@ class ProductController extends Controller
         $product = Product::find($id);
         $product->delete();
 
-        redirect('products');
+        redirect('/productos');
     }
 }
