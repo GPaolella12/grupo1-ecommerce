@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Brand;
 use Illuminate\Http\Request;
+use App\Brand;
+use App\Product;
 
-class BrandController extends Controller
+class BrandsController extends Controller
 {
     public function all(){
         $brands = Brand::all();
@@ -17,5 +18,13 @@ class BrandController extends Controller
         $brand = Brand::find($id);
 
         return view("brand", compact("brand"));
+    }
+
+    public function productsOfBrand($id){
+        $products = Product::where("brand_id", "like", "$id")->get();
+        dd($products);
+
+        return view("brand", "products");
+
     }
 }

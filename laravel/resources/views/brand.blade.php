@@ -3,7 +3,7 @@
 @section('main')
     <section class="jumbotron text-center">
         <div class="container">
-            <h1 class="jumbotron-heading">NUESTROS PRODUCTOS</h1>
+            <h1 class="jumbotron-heading">{{$brand->name}}</h1>
             <p class="lead text-muted mb-0">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte...</p>
         </div>
     </section>
@@ -26,37 +26,25 @@
                 <div class="card bg-light mb-3">
                     <div class="card-header bg-primary text-white text-uppercase"><i class="fa fa-list"></i> Categorías</div>
                     <ul class="list-group category_block">
-                        @foreach ($categories as $category)
-                            <li class="list-group-item"><a href="/categoria/{{$category->id}}">{{$category->name}}</a></li>        
-                        @endforeach
+                        <li class="list-group-item"><a href="/category/1">Smart Phones</a></li>
+                        <li class="list-group-item"><a href="/category/2">Tablets</a></li>
+                        <li class="list-group-item"><a href="/category/3">Laptops</a></li>
                     </ul>
                 </div>
+                
             </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-sm-3">
-                <div class="card bg-light mb-3">
-                    <div class="card-header bg-primary text-white text-uppercase"><i class="fa fa-list"></i> Marcas</div>
-                    <ul class="list-group category_block">
-                        @foreach ($brands as $brand)
-                            <li class="list-group-item"><a href="/marca/{{$brand->id}}">{{$brand->name}}</a></li>        
-                        @endforeach
-                    </ul>
-                </div>
-            </div>
-        
             <div class="col">
                 <div class="row">
                     @foreach($products as $product)
                         <div class="col-12 col-md-6 col-lg-4">
-                            <div class="card mb-4">
+                            <div class="card">
                                 <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
                                 <div class="card-body">
-                                    <h4 class="card-title text-center"><a href="/producto/{{$product['id']}}" title="View Product">{{$product->name}}</a></h4>
+                                    <h4 class="card-title"><a href="/producto/{{$product['id']}}" title="View Product">{{$product->name}}</a></h4>
                                     <p class="card-text">{{$product->brand}}</p>
                                     <div class="row">
                                         <div class="col">
-                                            <h4 class="text-center mb-3 btn-block">${{$product->price}}</h4>
+                                            <p class="btn btn-danger btn-block">${{$product->price}}</p>
                                         </div>
                                         <div class="col">
                                             <a href="#" class="btn btn-success btn-block">Agregar al carrito</a>

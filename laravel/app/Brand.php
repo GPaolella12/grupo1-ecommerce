@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Brand extends Model
 {
     public function products() {
-        return $this->hasMany("App\Product", "brand_id");
+        return $this->hasMany(Product::class, "brand_id");
       }
 }
