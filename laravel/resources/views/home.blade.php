@@ -1,21 +1,15 @@
-@extends('layouts.app')
+@extends("layout")
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-12">
-            <div class="row">
-                <div class="col-12">
-                    img
-                </div>
-                <div class="col-6">
-                    
-                </div>
-                <div class="col-6">
+@section("title")
+  Welcome!
+@endsection
 
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+@section("main")
+  <div class="jumbotron">
+    <h1>Welcome!</h1>
+    <h2>Check our products</h2>
+    <a href="/products">
+      <button class="btn btn-primary" type="button" name="button">Products</button>
+    </a>
+  </div>
 @endsection
