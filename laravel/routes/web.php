@@ -11,21 +11,20 @@
 |
 */
 
-Route::get('/', function () {
-    return view('layouts/app');
-});
-
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 
 // Products routes
 Route::get('/productos', 'ProductsController@all');
-Route::get('/producto/{id}', 'ProductsController@detail');
-Route::post('/buscar', 'ProductsController@search');
+Route::post('/productos/buscar', 'ProductsController@search');
 Route::get('/productos/agregar', "ProductsController@add")->middleware("auth");
 Route::post('/productos/agregar', "ProductsController@store")->middleware("auth");
-Route::post('/eliminar/{id}', 'ProductsController@delete')->middleware("auth");
+Route::post('/productos/eliminar/{id}', 'ProductsController@delete')->middleware("auth");
+Route::get('/productos/editar/{id}', 'ProductsController@edit')->middleware("auth");
+Route::post('/productos/editar', 'ProductsController@update')->middleware("auth");
+Route::get('/productos/admin', 'ProductsController@admin')->middleware("auth"); 
+Route::get('/productos/{id}', 'ProductsController@detail');
 
 // Brands routes
 Route::get('marcas', 'BrandsController@all');
@@ -36,5 +35,4 @@ Route::get('categorias', 'categoriesController@all');
 Route::get('categoria/{id}', 'categoriesController@productsOfCategory');
 
 // Users routes
-Route::get('profile', function(){ return view('profile'); });
-Route::get('buys', function(){ return view('buys'); });
+Route::get('/perfil', function(){ return view('profile'); });

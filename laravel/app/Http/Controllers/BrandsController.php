@@ -5,12 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Brand;
 use App\Product;
+use App\Category;
 
 class BrandsController extends Controller
 {
     public function all(){
         $brands = Brand::all();
-
         return view("brands", compact("brands"));
     }
 
@@ -21,10 +21,12 @@ class BrandsController extends Controller
     }
 
     public function productsOfBrand($id){
-        $products = Product::where("brand_id", "like", "$id")->get();
-        dd($products);
+        $brands = Brand::all();
+        $categories = Category::all();
+        $brand = Brand::find($id);
+        $products = Product::where("brand_id", $id)->get();
 
-        return view("brand", "products");
+        return view("brand", compact("products", "brand", "categories", "brands"));
 
     }
 }

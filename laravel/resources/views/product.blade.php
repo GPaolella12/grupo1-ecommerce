@@ -13,23 +13,15 @@
         Stock: {{$product->stock}}
         </li>
         <li>
-        Brand: <a href="/brand/{{$product->brand->id}}">{{$product->brand->name}}</a>
+        Brand: <a href="/marca/{{$product->brand->id}}">{{$product->brand->name}}</a>
         </li>
         <li>
-        Category: <a href="/category/{{$product->category->id}}">{{$product->category->name}}</a>
+        Category: <a href="/categoria/{{$product->category->id}}">{{$product->category->name}}</a>
         </li>
     </ul>
 
-    <a href="/products">
+    <a href="/productos">
         <button class="btn btn-default" type="button" name="button">Todos los productos</button>
     </a>
-
-    @if (Auth::check())
-        <form class="" action="/products/delete" method="post">
-        @csrf
-            <input type="hidden" name="id" value="{{$product->id}}">
-            <button type="submit" name="button" class="btn btn-danger">Eliminar</button>
-        </form>
-    @endif
     
 @endsection

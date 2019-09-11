@@ -9,25 +9,12 @@
     </section>
     <div class="container">
         <div class="row">
-            <div class="col">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/">Home</a></li>
-                        <li class="breadcrumb-item"><a href="category.html">Category</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Sub-category</li>
-                    </ol>
-                </nav>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
             <div class="col-12 col-sm-3">
                 <div class="card bg-light mb-3">
-                    <div class="card-header bg-primary text-white text-uppercase"><i class="fa fa-list"></i> Categorías</div>
+                    <div class="card-header bg-dark text-white text-uppercase"><i class="fa fa-list"></i> Categorías</div>
                     <ul class="list-group category_block">
                         @foreach ($categories as $category)
-                            <li class="list-group-item"><a href="/categoria/{{$category->id}}">{{$category->name}}</a></li>        
+                            <li class="list-group-item"><a href="/categoria/{{$category->id}}" style="color: black;">{{$category->name}}</a></li>        
                         @endforeach
                     </ul>
                 </div>
@@ -36,10 +23,10 @@
         <div class="row">
             <div class="col-12 col-sm-3">
                 <div class="card bg-light mb-3">
-                    <div class="card-header bg-primary text-white text-uppercase"><i class="fa fa-list"></i> Marcas</div>
+                    <div class="card-header bg-dark text-white text-uppercase"><i class="fa fa-list"></i> Marcas</div>
                     <ul class="list-group category_block">
                         @foreach ($brands as $brand)
-                            <li class="list-group-item"><a href="/marca/{{$brand->id}}">{{$brand->name}}</a></li>        
+                            <li class="list-group-item"><a href="/marca/{{$brand->id}}" style="color: black;">{{$brand->name}}</a></li>        
                         @endforeach
                     </ul>
                 </div>
@@ -52,14 +39,15 @@
                             <div class="card mb-4">
                                 <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
                                 <div class="card-body">
-                                    <h4 class="card-title text-center"><a href="/producto/{{$product['id']}}" title="View Product">{{$product->name}}</a></h4>
-                                    <p class="card-text">{{$product->brand}}</p>
+                                    <h4 class="card-title text-center"><a href="/productos/{{$product['id']}}" title="View Product">{{$product->name}}</a></h4>
+                                    <p class="card-text">{{$product->brand->name}}</p>
                                     <div class="row">
                                         <div class="col">
+                                            <small>{{$product->discount}}% de descuento</small> 
                                             <h4 class="text-center mb-3 btn-block">${{$product->price}}</h4>
                                         </div>
                                         <div class="col">
-                                            <a href="#" class="btn btn-success btn-block">Agregar al carrito</a>
+                                            <a href="#" class="btn btn-primary btn-block">Agregar al carrito</a>
                                         </div>
                                     </div>
                                 </div>
@@ -67,7 +55,6 @@
                         </div>
                     @endforeach
                     <div class="col-12">
-                    <br>
                     <br>
                         <nav aria-label="...">
                             <ul class="pagination">

@@ -3,15 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use App\Product;
-use App\Category;
 use App\Brand;
+use App\Category;
 
 class ProductsController extends Controller
 {
     public function all()
     {
-        $products = Product::paginate(20);
+        $products = Product::with("brand", "category")->paginate(12);
         $categories = Category::all();
         $brands = Brand::all();
 
@@ -55,22 +56,52 @@ class ProductsController extends Controller
         $product->stock = $request->stock;
 
         $product->save();
-        return redirect("/productos");
+        return redirect("/productos/admin");
     }
 
     public function detail($id)
     {
-        $product = Product::find($id);
+        $product = Product::with("category", "brand")->find($id);
 
         return view("product", compact("product"));
     }
 
+    public function admin(){
+        
+        $products = Product::with("brand", "category")->get();
+        
+
+        return view("adminProducts", compact("products"));
+    }
+
+    public function edit($id){
+        $product = Product::with("brand", "category")->find($id);
+        $brands = Brand::all();
+        $categories = Category::all();
+
+        return view('editProduct', compact("product", "brands", "categories"));
+    }
+
+    public function update(Request $request){
+        $product = Product::find($request->id);
+        $product->name = $request->name;
+        $product->brand_id = $request->brand;
+        $product->category_id = $request->category;
+        $product->price = $request->price;
+        $product->discount = $request->discount;
+        $product->stock = $request->stock;
+
+        $product->save();
+        return redirect('/productos/admin');
+
+    }
+
     public function delete(Request $request)
     {   
-        $id = $request['id'];
+        $id = $request->id;
         $product = Product::find($id);
         $product->delete();
 
-        redirect('/productos');
+        redirect('/productos/admin');
     }
 }

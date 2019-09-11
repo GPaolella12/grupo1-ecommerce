@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Category;
 use App\Product;
+use App\Brand;
 
 class CategoriesController extends Controller
 {
@@ -21,10 +22,12 @@ class CategoriesController extends Controller
       }
 
       public function productsOfCategory($id){
-          $products = Product::where("category_id", "like", "$id")->get();
-          dd($products);
+          $brands = Brand::all();
+          $categories = Category::all();
+          $category = Category::find($id);
+          $products = Product::where("category_id", $id)->get();
 
-          return view("category", "products");
+          return view("category", compact("products", "category", "brands", "categories"));
 
       }
 }

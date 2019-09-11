@@ -57,11 +57,11 @@
                                 </a>
     
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="profile">
+                                    <a class="dropdown-item" href="/perfil">
                                         Mi Perfil
                                     </a>
-                                    <a class="dropdown-item" href="buys">
-                                        Mis Compras
+                                    <a class="dropdown-item" href="/productos/admin">
+                                        Mis Productos
                                     </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();

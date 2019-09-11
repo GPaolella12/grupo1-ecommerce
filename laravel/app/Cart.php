@@ -4,10 +4,15 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
+class Cart extends Model
 {
-    protected $fillable = ['title', 'description', 'price', 'discount', 'img'];
-    public $timestamps = false;
-    protected $guarded;
+    protected $fillable = [];
 
+    public function user(){
+        return $this->belongsTo(User::class, 'user_id');
+    }
+
+    public function product(){
+        return $this->belongsToMany(Product::class, 'product_id');
+    }
 }
